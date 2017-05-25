@@ -19,7 +19,7 @@
       ],
       "readyEvent": null,
       "delay": 1000,
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold" : 0.9,
       "requireSameDimensions" : true,
       "onBeforeScript": "onBefore.js",
       "onReadyScript": "onReady.js"
@@ -35,7 +35,7 @@
       ],
       "readyEvent": null,
       "delay": 1000,
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold" : 0.9,
       "requireSameDimensions" : true,
       "onBeforeScript": "onBefore.js",
       "onReadyScript": "onHover.js"

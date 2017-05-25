@@ -9,7 +9,7 @@ pipeline:
       - /tmp/cache:/cache
 
   test:
-    image: docksal/backstopjs
+    image: atoto/backstopjs-trusty
     commands:
       - npm install
       - npm start &
