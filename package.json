@@ -1,0 +1,16 @@
+{
+  "name": "css-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/serve/bin/serve.js -s public --port 5000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aisensiy@163.com",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^5.1.5"
+  }
+}

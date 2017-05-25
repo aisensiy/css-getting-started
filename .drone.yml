@@ -1,0 +1,34 @@
+pipeline:
+  restore-cache:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./node_modules
+    # Mount the cache volume, needs "Trusted"
+    volumes:
+      - /tmp/cache:/cache
+
+  test:
+    image: docksal/backstopjs
+    commands:
+      - npm install
+      - npm start &
+      - sleep 5
+      - backstop test
+
+  report:
+    image: eisenxu/junit-reportor
+    test_results: backstop_data/ci_report
+    when: 
+      status: [ success, failure ]
+  
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./node_modules
+    # Mount the cache volume, needs "Trusted"
+    volumes:
+      - /tmp/cache:/cache
+    when:
+      status: [ success, failure ]

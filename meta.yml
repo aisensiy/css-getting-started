@@ -1,0 +1,15 @@
+freeze_files:
+    - meta.yml
+    - backstop_data/bitmaps_reference/
+    - backstop_data/casper_scripts/
+    - package.json
+    - .drone.yml
+    - .report.json
+    - public/fonts.css
+    - public/fonts/
+    - backstop.json
+    - package.json
+    - README.md
+report_files:
+    - xunit.xml
+report_target: .report.json
