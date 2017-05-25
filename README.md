@@ -1,4 +1,8 @@
-构建一个纯 css 的侧边导航栏组件。
+构建一个纯 css 的侧边导航栏组件，在鼠标 `hover` 上之后会有一个背景变换。
+
+![](https://github.com/aisensiy/css-getting-started/raw/master/screen.png)
+
+![](https://github.com/aisensiy/css-getting-started/raw/master/onhover.png)
 
 # 前提
 
@@ -37,14 +41,33 @@
 
 在 `public` 目录下有一个 `index.html` 文件，对其 `style` 内的样式进行修改，已达到截图的效果。其中具体的规格如下:
 
+1. 清理 `ul` `li` 默认的 `padding` `margin` `style`
+2. 设置链接的上下 padding 0.5em 左右 padding 1em
+3. 设置链接颜色 `#777777`
+4. 当鼠标移动上时背景色变为 `#eeeeee`
+
+其他没有说明的样式请按照图片中的效果进行修改。
 
 # 在本地执行测试
 
 首先，这一步不是必须的。
 
-你需要在本地安装 [node.js](https://nodejs.org/en/)，然后你需要在这个项目目录下执行以下的命令：
+按照下面的步骤安装必要的工具：
+
+1. 安装 [node.js](https://nodejs.org/en/)
+2. 安装 [PhantomJS](http://phantomjs.org/download.html)
+
+然后执行以下命令安装其他依赖
 
 ```
-$ npm install
-$ npm test
+$ npm install -g casperjs
+$ npm install -g backstopjs
 ```
+
+在本地执行测试
+
+```
+$ backstop test
+```
+
+> **注意** 由于不同操作系统下同样的字体的展示也有可能存在一定的区别，如果没有对字体做任何修改但是在本地的测试无法通过请联系 [@aisensiy](https://github.com/aisensiy)。

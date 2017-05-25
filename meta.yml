@@ -6,6 +6,7 @@ freeze_files:
     - .drone.yml
     - .report.json
     - public/fonts.css
+    - public/normalize.css
     - public/fonts/
     - backstop.json
     - package.json
