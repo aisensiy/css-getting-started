@@ -20,6 +20,8 @@ pipeline:
     image: plugins/s3
     acl: public-read
     source: backstop_data/**/*
+    when: 
+      status: [ success, failure ]
 
   report:
     image: eisenxu/junit-reportor
