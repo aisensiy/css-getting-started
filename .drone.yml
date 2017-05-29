@@ -16,9 +16,15 @@ pipeline:
       - sleep 5
       - backstop test
 
+  upload_report:
+    image: plugins/s3
+    acl: public-read
+    source: backstop_data/**/*
+
   report:
     image: eisenxu/junit-reportor
     test_results: backstop_data/ci_report
+    report_entrypoint: backstop_data/html_report/index.html
     when: 
       status: [ success, failure ]
   
